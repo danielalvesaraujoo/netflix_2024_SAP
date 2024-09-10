@@ -1,0 +1,66 @@
+<mvc:View controllerName="projectnetflix.controller.Inicio"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <subHeader>
+            <Toolbar >
+                <content>
+                    <Link text="Inicio" press="onInicioLinkPress"/>
+                    <Link text="Filmes" press="onFilmesLinkPress"/> 
+                    <Link text="Series" press="onSeriesLinkPress"/>
+                    <ToolbarSpacer ></ToolbarSpacer>
+                    <SearchField width="30%" id="idSearchField" search="onBuscarDados"></SearchField>                     
+                    
+                </content>
+            </Toolbar>
+        </subHeader>
+
+        <content>
+            <layout:Grid content="{APINetFlix>/titles}">
+                <VBox width="300px" height="350px" class="preencherBoxPreto">
+                    <Image src="{APINetFlix>jawSummary/backgroundImage/url}" width="100%" height="100%" />
+                    <Image src="{APINetFlix>jawSummary/logoImage/url}" width="60%" height="60%" class="margemLogo"/>
+                    <Text  text="{APINetFlix>jawSummary/title}" class="corTextoBranco espacoRodape margemLogo"/>
+                    <Text  text="{APINetFlix>jawSummary/synopsis}" class="corTextoBranco espacoRodape margemLogo"/>
+                    <Text  text="{APINetFlix>jawSummary/genres/1/name}" class="corTextoBranco espacoRodape margemLogo"/>
+                    <Text  text="{APINetFlix>jawSummary/genres/2/name}" class="corTextoBranco espacoRodape margemLogo"/>                    
+                </VBox>
+<!--
+
+<VBox width="300px" height="350px" class="preencherBoxPreto">
+                    <Image src="../img/got.jpg" width="100%" height="100%" class="tamanhoimg"/>
+                    <Text  text="Game of Thrones" class="corTextoBranco"/>
+                    <Text  text="1 temporada" class="corTextoBranco"/>
+                    <Text  text="10 Episodios" class="corTextoBranco"/>
+                    <Text  text="Categoria Drama" class="corTextoBranco"/>
+                </VBox>
+
+                <VBox width="300px" height="350px" class="preencherBoxPreto">
+                    <Image src="../img/breakingbad.jpg" width="100%" height="100%" class="tamanhoimg"/>
+                    <Text  text="Breaking Bad" class="corTextoBranco"/>
+                    <Text  text="3 temporada" class="corTextoBranco"/>
+                    <Text  text="12 Episodios" class="corTextoBranco"/>
+                    <Text  text="Categoria Drama" class="corTextoBranco"/>
+                </VBox>
+
+                <VBox width="300px" height="350px" class="preencherBoxPreto">
+                    <Image src="../img/vikings.jpg" width="100%" height="100%" class="tamanhoimg"/>
+                    <Text  text="Vinkings" class="corTextoBranco"/>
+                    <Text  text="4 temporada" class="corTextoBranco"/>
+                    <Text  text="15 Episodios" class="corTextoBranco"/>
+                    <Text  text="Categoria Aventura, Drama, Histórico" class="corTextoBranco"/>
+                </VBox>
+
+                <VBox width="300px" height="350px" class="preencherBoxPreto">
+                    <Image src="../img/friends.jpg" width="100%" height="100%" class="tamanhoimg"/>
+                    <Text  text="Friends" class="corTextoBranco"/>
+                    <Text  text="6 temporada" class="corTextoBranco"/>
+                    <Text  text="20 Episodios" class="corTextoBranco"/>
+                    <Text  text="Categoria Sitcom" class="corTextoBranco"/>
+                </VBox> -->
+            </layout:Grid>
+        </content>
+      
+    </Page>
+</mvc:View>

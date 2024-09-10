@@ -1,0 +1,25 @@
+/* Enter your custom styles here */
+.preencherBoxPreto{
+    background-color: black;
+}
+
+.corTextoBranco{
+    background-color: white;
+}
+
+.tamanhoimg{
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 270px;
+    min-height: 270px;
+}
+
+.espacoRodape{
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.margemLogo{
+    position:relative;
+    top: -60px;
+}
